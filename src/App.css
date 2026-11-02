@@ -1186,12 +1186,37 @@
     font-size: 29px;
   }
 
+  .admin-dashboard-intro > p:last-child {
+    font-size: 14px;
+  }
+
+  .admin-record-count {
+    font-size: 12px;
+  }
+
   .admin-record {
     padding: 12px 10px;
   }
 
+  .admin-record-main strong {
+    font-size: 13px;
+  }
+
+  .admin-record-main > span,
+  .admin-record-meta > span {
+    font-size: 11px;
+  }
+
   .admin-record-preview {
     padding: 16px;
+  }
+
+  .admin-detail-list dt {
+    font-size: 12px;
+  }
+
+  .admin-detail-list dd {
+    font-size: 13px;
   }
 
   .admin-detail-list > div {
@@ -1209,7 +1234,7 @@
 
   .header-link {
     gap: 4px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .hero {
@@ -1219,8 +1244,8 @@
 
   .eyebrow {
     margin-bottom: 17px;
-    font-size: 9px;
-    letter-spacing: 1.15px;
+    font-size: 10px;
+    letter-spacing: 0.9px;
   }
 
   .hero h1 {
@@ -1230,12 +1255,25 @@
 
   .hero-description {
     margin: 18px 0 20px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.7;
+  }
+
+  .hero-note {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .strip-label {
+    font-size: 11px;
   }
 
   .button-primary {
     width: 100%;
+  }
+
+  .button {
+    font-size: 14px;
   }
 
   .contact-section {
@@ -1248,6 +1286,10 @@
     font-size: 28px;
   }
 
+  .contact-copy > p:last-child {
+    font-size: 14px;
+  }
+
   .contact-actions {
     width: 100%;
     flex-direction: column;
@@ -1256,11 +1298,6 @@
   .contact-actions .button {
     width: 100%;
     min-height: 47px;
-  }
-
-  .hero-note {
-    font-size: 10px;
-    text-align: center;
   }
 
   .hero-art {
@@ -1312,6 +1349,7 @@
 
   .intro-strip > p {
     font-size: 17px;
+    line-height: 1.6;
   }
 
   .steps-section {
@@ -1332,6 +1370,8 @@
 
   .step-card p {
     max-width: none;
+    font-size: 14px;
+    line-height: 1.65;
   }
 
   .form-section {
@@ -1346,7 +1386,8 @@
 
   .form-intro > p:not(.eyebrow) {
     margin-top: 12px;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.65;
   }
 
   .form-heading {
@@ -1369,15 +1410,24 @@
 
   .field input {
     min-height: 46px;
+    font-size: 15px;
+  }
+
+  .field {
     font-size: 13px;
   }
 
   .field textarea {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .choice-field {
     margin-top: 20px;
+  }
+
+  .choice-field legend {
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   .choice-list {
@@ -1386,12 +1436,46 @@
   }
 
   .choice-list label span {
-    min-height: 37px;
+    min-height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 7px;
+    padding: 9px 8px;
+    font-size: 12px;
     text-align: center;
+  }
+
+  .privacy-consent > p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .privacy-consent label {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .privacy-note {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .captcha-field > label {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .captcha-code {
+    min-width: 100px;
+    font-size: 20px;
+  }
+
+  .captcha-row input {
+    font-size: 15px;
+  }
+
+  .captcha-error {
+    font-size: 12px;
   }
 
   .last-fields {
@@ -1415,10 +1499,11 @@
     order: 1;
     width: 100%;
     font-size: 13px;
+    line-height: 1.5;
   }
 
   .footer-email {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
