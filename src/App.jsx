@@ -21,6 +21,27 @@ function getTodayDate() {
   return `${year}-${month}-${day}`
 }
 
+function isMobileDevice() {
+  return typeof navigator !== 'undefined' && /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+}
+
+function getEmailComposeUrl(subject = '', body = '') {
+  if (isMobileDevice()) {
+    const params = []
+    if (subject) params.push(`subject=${encodeURIComponent(subject)}`)
+    if (body) params.push(`body=${encodeURIComponent(body)}`)
+    return `mailto:${recipient}${params.length ? `?${params.join('&')}` : ''}`
+  }
+
+  const url = new URL('https://mail.google.com/mail/')
+  url.searchParams.set('view', 'cm')
+  url.searchParams.set('fs', '1')
+  url.searchParams.set('to', recipient)
+  if (subject) url.searchParams.set('su', subject)
+  if (body) url.searchParams.set('body', body)
+  return url.toString()
+}
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -212,14 +233,7 @@ function App() {
       .join('\n')
 
     const subject = `Mumbai relocation help — ${formData.get('name')}`
-    const url = new URL('https://mail.google.com/mail/')
-    url.searchParams.set('view', 'cm')
-    url.searchParams.set('fs', '1')
-    url.searchParams.set('to', recipient)
-    url.searchParams.set('su', subject)
-    url.searchParams.set('body', details)
-
-    setComposeUrl(url.toString())
+    setComposeUrl(getEmailComposeUrl(subject, details))
     setCaptcha(createCaptcha())
     setCaptchaInput('')
     setCaptchaError('')
@@ -429,20 +443,19 @@ function App() {
               </button>
             ) : (
               <div className="submit-confirmation" role="status">
-                <p>Thanks — your details are ready. Open the Gmail draft to review and send them.</p>
-                <button
+                <p>Thanks — your details are ready. Open the email draft to review and send them.</p>
+                <a
                   className="button button-submit"
-                  type="button"
-                  onClick={() => window.location.assign(composeUrl)}
+                  href={composeUrl}
                 >
-                  Open Gmail draft <ArrowIcon />
-                </button>
+                  Open email draft <ArrowIcon />
+                </a>
               </div>
             )}
             <p className="privacy-note">
               {captchaVerified
-                ? `The Gmail draft will be addressed to ${recipient}.`
-                : 'After the quick check, your details will be prepared in a Gmail draft for you to review.'}
+                ? `Your email will be addressed to ${recipient}.`
+                : 'After the quick check, your details will be prepared in an email draft for you to review.'}
             </p>
           </form>
         </section>
@@ -457,8 +470,8 @@ function App() {
         <div className="contact-actions">
           <a
             className="button contact-email-button"
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}`}
-            target="_blank"
+            href={getEmailComposeUrl()}
+            target={isMobileDevice() ? undefined : '_blank'}
             rel="noreferrer"
           >
             Write an email <ArrowIcon />
