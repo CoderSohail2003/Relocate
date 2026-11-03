@@ -1029,18 +1029,18 @@
   background: var(--ink);
 }
 
-.contact-phone-button {
+.contact-secondary-button {
   padding: 0 15px;
   border: 1px solid #c8c0b0;
   color: var(--ink);
   background: #f7f4ec;
 }
 
-.contact-phone-button:hover {
+.contact-secondary-button:hover {
   background: #fffdf8;
 }
 
-.contact-phone-button svg {
+.contact-secondary-button svg {
   width: 16px;
   height: 16px;
   fill: none;

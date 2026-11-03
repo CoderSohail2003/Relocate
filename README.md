@@ -22,7 +22,7 @@ This project is a front-end demo only. The admin password and sample enquiries a
 
 ## Enquiry form
 
-Submitting the form requires consent to be contacted about the relocation enquiry and first asks the student to enter a short, browser-generated CAPTCHA. After it is completed, a confirmation appears and the student can open a pre-filled email draft addressed to `relocate.webapp@gmail.com`. Desktop browsers use Gmail web compose; mobile browsers use the standard `mailto:` handoff so the phone can open its configured mail app. The student can review the message and press **Send**. The notice explains that the demo site itself does not send or store student details. The contact section also includes a tap-to-call link for `+91 97029 66965`.
+Submitting the form requires consent to be contacted about the relocation enquiry and first asks the student to enter a short, browser-generated CAPTCHA. After it is completed, a confirmation appears and the student can open a pre-filled email draft addressed to `relocate.webapp@gmail.com`. Desktop browsers use Gmail web compose; mobile browsers use the standard `mailto:` handoff so the phone can open its configured mail app. The student can review the message and press **Send**. The notice explains that the demo site itself does not send or store student details. The contact section also has WhatsApp and tap-to-call links for `+91 97029 66965`.
 
 The CAPTCHA is checked in the browser and is only a light deterrent; it does not provide reliable bot protection. Stronger abuse prevention requires server-side CAPTCHA verification. The site does not send or store form submissions itself; automatic delivery would also require a backend or email service.
 

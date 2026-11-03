@@ -476,8 +476,11 @@ function App() {
           >
             Write an email <ArrowIcon />
           </a>
-          <a className="button contact-phone-button" href={`tel:${contactPhone}`}>
-            <PhoneIcon /> {contactPhoneDisplay}
+          <a className="button contact-email-button" href={`https://wa.me/${contactPhone.slice(1)}`}>
+            WhatsApp <ArrowIcon />
+          </a>
+          <a className="button contact-secondary-button" href={`tel:${contactPhone}`}>
+            <PhoneIcon /> Call {contactPhoneDisplay}
           </a>
         </div>
       </section>
