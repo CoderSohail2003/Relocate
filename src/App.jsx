@@ -4,7 +4,6 @@ import './App.css'
 
 const recipient = 'relocate.webapp@gmail.com'
 const contactPhone = '+919702966965'
-const contactPhoneDisplay = '+91 97029 66965'
 const demoAdminPassword = 'relocateadmin@RELOCATE2002'
 const captchaCharacters = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ'
 
@@ -480,7 +479,7 @@ function App() {
             WhatsApp <ArrowIcon />
           </a>
           <a className="button contact-secondary-button" href={`tel:${contactPhone}`}>
-            <PhoneIcon /> Call {contactPhoneDisplay}
+            <PhoneIcon /> Call
           </a>
         </div>
       </section>
