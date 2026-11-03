@@ -33,9 +33,9 @@ const students = [
   ['Dhruv Bansal', 'New Delhi', 'BMS', 'NMIMS', 'Vile Parle', 'Still figuring it out', 'August 2026'],
 ]
 
-export const demoApplications = students.map(
+export const sampleApplications = students.map(
   ([name, currentAddress, course, allottedCollege, collegeLocation, accommodation, moveDate], index) => ({
-    id: `DEMO-${String(index + 1).padStart(3, '0')}`,
+    id: `ENQ-${String(index + 1).padStart(3, '0')}`,
     name,
     phone: `+91 90000 ${String(10000 + index).slice(-5)}`,
     currentAddress,

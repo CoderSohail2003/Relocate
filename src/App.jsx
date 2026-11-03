@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { demoApplications } from './data/demoApplications.js'
+import { sampleApplications } from './data/sampleApplications.js'
 import './App.css'
 
 const recipient = 'relocate.webapp@gmail.com'
 const contactPhone = '+919702966965'
-const demoAdminPassword = 'relocateadmin@RELOCATE2002'
+const adminPassword = 'relocateadmin@RELOCATE2002'
 const captchaCharacters = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ'
 
 function createCaptcha() {
@@ -66,7 +66,7 @@ function AdminLogin() {
   function handleLogin(event) {
     event.preventDefault()
 
-    if (password !== demoAdminPassword) {
+    if (password !== adminPassword) {
       setError('That password does not match. Please try again.')
       return
     }
@@ -94,8 +94,8 @@ function AdminLogin() {
         </section>
         <div className="admin-records-layout">
           <section className="admin-record-list" aria-label="Sample student enquiries">
-            <p className="admin-record-count">{demoApplications.length} sample enquiries</p>
-            {demoApplications.map((application) => (
+            <p className="admin-record-count">{sampleApplications.length} sample enquiries</p>
+            {sampleApplications.map((application) => (
               <button
                 className={`admin-record${selectedApplication?.id === application.id ? ' is-selected' : ''}`}
                 key={application.id}
@@ -385,7 +385,7 @@ function App() {
 
             <div className="privacy-consent">
               <p>
-                We’ll use your details only to respond to your relocation enquiry. This demo opens a
+                We’ll use your details only to respond to your relocation enquiry. This site opens a
                 Gmail draft; the website does not send or store your information.
               </p>
               <label>
