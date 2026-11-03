@@ -1074,6 +1074,100 @@
   font-size: 11px;
 }
 
+@media (min-width: 821px) {
+  .admin-login-description,
+  .admin-dashboard-intro > p:last-child,
+  .admin-empty-preview {
+    font-size: 15px;
+  }
+
+  .admin-login-error,
+  .admin-signout,
+  .admin-record-count,
+  .admin-detail-list dt,
+  .admin-detail-list dd {
+    font-size: 14px;
+  }
+
+  .admin-record-main strong {
+    font-size: 15px;
+  }
+
+  .admin-record-main > span,
+  .admin-record-meta > span {
+    font-size: 13px;
+  }
+
+  .admin-record-meta > span:last-child,
+  .admin-preview-id {
+    font-size: 12px;
+  }
+
+  .admin-record {
+    padding: 15px;
+  }
+
+  .header-link,
+  .intro-strip a,
+  .button {
+    font-size: 15px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .hero-description,
+  .form-intro > p:not(.eyebrow),
+  .contact-copy > p:last-child {
+    font-size: 16px;
+  }
+
+  .hero-note,
+  .required-note,
+  .art-caption,
+  .privacy-note,
+  .captcha-error,
+  .footer-email {
+    font-size: 13px;
+  }
+
+  .strip-label {
+    font-size: 12px;
+  }
+
+  .step-card p {
+    font-size: 15px;
+  }
+
+  .field,
+  .choice-field legend,
+  .privacy-consent label {
+    font-size: 14px;
+  }
+
+  .field input,
+  .field textarea {
+    font-size: 15px;
+  }
+
+  .choice-list label span {
+    font-size: 13px;
+  }
+
+  .privacy-consent > p {
+    font-size: 13px;
+  }
+
+  .captcha-field > label {
+    font-size: 14px;
+  }
+
+  .submit-confirmation > p {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 820px) {
   .site-shell {
     width: min(100% - 40px, 620px);
